@@ -19,13 +19,13 @@ var logErrorFlag = false
 
 func init() {
 	buildLogFile()
-	if strings.Contains(GetLogLevel(), "logInfo") {
+	if strings.Contains(GetLogLevel(), "info") {
 		logInfoFlag = true
 	}
-	if strings.Contains(GetLogLevel(), "logDebug") {
+	if strings.Contains(GetLogLevel(), "debug") {
 		logDebugFlag = true
 	}
-	if strings.Contains(GetLogLevel(), "logErrInfo") {
+	if strings.Contains(GetLogLevel(), "error") {
 		logErrorFlag = true
 	}
 }
