@@ -1,4 +1,4 @@
-module go-common
+module github.com/lb-never/go-common
 
 go 1.12
 
