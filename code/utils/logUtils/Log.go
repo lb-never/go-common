@@ -2,7 +2,7 @@ package logUtils
 
 import (
 	"fmt"
-	"go-common/code/utils/configUtils"
+	"github.com/lb-never/go-common/code/utils/configUtils"
 	"log"
 	"os"
 	"strings"
@@ -14,19 +14,19 @@ var baseFileName = "log-"
 var logInfo *log.Logger
 var logDebug *log.Logger
 var logErrInfo *log.Logger
-var logDebugFlag =false
-var logInfoFlag =false
-var logErrorFlag =false
+var logDebugFlag = false
+var logInfoFlag = false
+var logErrorFlag = false
 
 func init() {
 	buildLogFile()
-	if strings.Contains(configUtils.GetLogLevel(), "logInfo"){
+	if strings.Contains(configUtils.GetLogLevel(), "logInfo") {
 		logInfoFlag = true
 	}
-	if strings.Contains(configUtils.GetLogLevel(), "logDebug"){
+	if strings.Contains(configUtils.GetLogLevel(), "logDebug") {
 		logDebugFlag = true
 	}
-	if strings.Contains(configUtils.GetLogLevel(), "logErrInfo"){
+	if strings.Contains(configUtils.GetLogLevel(), "logErrInfo") {
 		logErrorFlag = true
 	}
 }
