@@ -1,6 +1,7 @@
 package configUtils
 
 import (
+	"go-common/code/utils/fileUtils"
 	"go-common/code/utils/logUtils"
 	"go-common/code/utils/stringUtils"
 	"gopkg.in/yaml.v2"
@@ -10,8 +11,9 @@ import (
 
 
 func init()  {
-
-	initConfig("./config.yaml")
+	if fileUtils.FileExists("./config.yaml"){
+		initConfig("./config.yaml")
+	}
 }
 
 var configMap map[interface{}]interface{}
