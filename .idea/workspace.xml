@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="446bbd1d-81d3-4909-97ae-c8510c39a870" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/utils/configUtils/ConfigUtils.go" beforeDir="false" afterPath="$PROJECT_DIR$/code/utils/configUtils/ConfigUtils.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/utils/logUtils/Log.go" beforeDir="false" afterPath="$PROJECT_DIR$/code/utils/logUtils/Log.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/utils/configUtils/ConfigUtils.go" beforeDir="false" afterPath="$PROJECT_DIR$/code/utils/ConfigUtils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/utils/fileUtils/FileUtils.go" beforeDir="false" afterPath="$PROJECT_DIR$/code/utils/FileUtils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/utils/logUtils/Log.go" beforeDir="false" afterPath="$PROJECT_DIR$/code/utils/Log.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/utils/stringUtils/StringUtils.go" beforeDir="false" afterPath="$PROJECT_DIR$/code/utils/StringUtils.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,13 +39,14 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\goproject\go-common\code\utils" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\goproject\go-common\code\utils" />
       <recent name="D:\goproject\go-common\code\utils\logUtils" />
       <recent name="D:\goproject\go-common\code\utils\configUtils" />
       <recent name="D:\goproject\go-common\code\utils\stringUtils" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\goproject\go-common\code\utils" />
     </key>
   </component>
   <component name="RunDashboard">

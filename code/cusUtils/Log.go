@@ -1,8 +1,7 @@
-package logUtils
+package cusUtils
 
 import (
 	"fmt"
-	"github.com/lb-never/go-common/code/utils/configUtils"
 	"log"
 	"os"
 	"strings"
@@ -20,13 +19,13 @@ var logErrorFlag = false
 
 func init() {
 	buildLogFile()
-	if strings.Contains(configUtils.GetLogLevel(), "logInfo") {
+	if strings.Contains(GetLogLevel(), "logInfo") {
 		logInfoFlag = true
 	}
-	if strings.Contains(configUtils.GetLogLevel(), "logDebug") {
+	if strings.Contains(GetLogLevel(), "logDebug") {
 		logDebugFlag = true
 	}
-	if strings.Contains(configUtils.GetLogLevel(), "logErrInfo") {
+	if strings.Contains(GetLogLevel(), "logErrInfo") {
 		logErrorFlag = true
 	}
 }

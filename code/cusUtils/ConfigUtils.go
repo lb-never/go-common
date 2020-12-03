@@ -1,16 +1,13 @@
-package configUtils
+package cusUtils
 
 import (
-	"github.com/lb-never/go-common/code/utils/fileUtils"
-	"github.com/lb-never/go-common/code/utils/logUtils"
-	"github.com/lb-never/go-common/code/utils/stringUtils"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"os"
 )
 
 func init() {
-	if fileUtils.FileExists("./config.yaml") {
+	if FileExists("./config.yaml") {
 		initConfig("./config.yaml")
 	}
 }
@@ -20,12 +17,12 @@ var configMap map[interface{}]interface{}
 func initConfig(configPath string) {
 	data, err := ioutil.ReadFile(configPath)
 	if err != nil {
-		logUtils.ErrInfo("配置读取失败", err)
+		ErrInfo("配置读取失败", err)
 		os.Exit(1)
 	}
 	err = yaml.Unmarshal([]byte(data), &configMap)
 	if err != nil {
-		logUtils.ErrInfo("配置读取失败", err)
+		ErrInfo("配置读取失败", err)
 		os.Exit(1)
 	}
 }
@@ -33,7 +30,7 @@ func initConfig(configPath string) {
 func GetKeyValue(key interface{}) string {
 	val, ok := configMap[key]
 	if ok {
-		val, ok := stringUtils.GetStringValue(val)
+		val, ok := GetStringValue(val)
 		if ok {
 			return val
 		} else {

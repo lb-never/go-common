@@ -1,12 +1,12 @@
-package fileUtils
+package cusUtils
 
 import "os"
 
-func DirExists(path string)bool{
+func DirExists(path string) bool {
 	return FileExists(path)
 }
 
-func FileExists(path string)bool{
+func FileExists(path string) bool {
 	_, err := os.Stat(path)
 	if err == nil {
 		return true
