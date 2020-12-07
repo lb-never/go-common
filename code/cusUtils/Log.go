@@ -53,9 +53,9 @@ func buildLogFile() {
 	if err != nil {
 		log.Fatalln("Failed to open error log file:", err)
 	}
-	logInfo = log.New(logFile, "[logInfo]", log.Lshortfile)
-	logDebug = log.New(logFile, "[logDebug]", log.Lshortfile)
-	logErrInfo = log.New(logFile, "[logErrInfo]", log.Lshortfile)
+	logInfo = log.New(logFile, "[logInfo]", log.Lshortfile|log.Ldate|log.Ltime)
+	logDebug = log.New(logFile, "[logDebug]", log.Lshortfile|log.Ldate|log.Ltime)
+	logErrInfo = log.New(logFile, "[logErrInfo]", log.Lshortfile|log.Ldate|log.Ltime)
 	/*logInfo = log.New(io.MultiWriter(logFile, os.Stderr), "[logInfo]", log.Lshortfile|log.Ldate|log.Ltime) //|log.Ldate|log.Ltime
 	logErrInfo = log.New(io.MultiWriter(logFile, os.Stderr), "[logErrInfo]", log.Lshortfile|log.Ldate|log.Ltime) //|log.Ldate|log.Ltime
 	logDebug = log.New(io.MultiWriter(logFile, os.Stderr), "[logDebug]", log.Lshortfile|log.Ldate|log.Ltime) //|log.Ldate|log.Ltime*/
