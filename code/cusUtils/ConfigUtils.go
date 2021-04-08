@@ -41,6 +41,15 @@ func GetKeyValue(key interface{}) string {
 	}
 }
 
+func GetKeyValueInt(key interface{}) int {
+	val, ok := configMap[key]
+	if ok {
+		return val.(int)
+	} else {
+		return 0
+	}
+}
+
 func GetLogLevel() string {
 	return GetKeyValue("logLevel")
 }
